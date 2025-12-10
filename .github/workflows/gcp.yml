@@ -37,8 +37,8 @@ jobs:
               run: terraform validate
 
             - name: Terraform Plan
-              run: terraform plan -input=false -var="project_id=${{ secrets.GCP_PROJECT_ID }}"
+              run: terraform plan
 
             - name: Terraform Apply
               if: github.ref == 'refs/heads/main'
-              run: terraform apply -input=false -auto-approve -var="project_id=${{ secrets.GCP_PROJECT_ID }}"
+              run: terraform apply -auto-approve
