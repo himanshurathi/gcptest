@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket = "cb-terracloudlabs91samplestoragebucket"
-    prefix = "terraform/state"    
+    prefix = "terraform1/state"    
   }
 }
 provider "google" {
@@ -10,6 +10,6 @@ provider "google" {
   
 }
 resource "google_compute_network" "vpc_network" {
-  name                    = "tf-vpc-network8"
+  name                    = "tf-vpc-network81"
   auto_create_subnetworks = "true"
 }
